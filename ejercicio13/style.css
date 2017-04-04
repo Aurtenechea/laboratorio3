@@ -1,0 +1,15 @@
+p {
+    float:  left;
+    width: 300px;
+}
+
+.short {
+    overflow: hidden;
+    line-height: 1em;
+    height: 15em;
+}
+
+.long    {
+    line-height: 1em;
+    height: auto;
+}
