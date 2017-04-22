@@ -20,7 +20,7 @@ window.onload = function(){
             //1
             //document.write(item + "<br>");
             //2
-            document.getElementsByTagName("p")[0].innerHTML += item + "<br>";
+            document.getElementsByTagName("p")[0].innerHTML += item + " index: " + index +"<br>";
         }
     );
 

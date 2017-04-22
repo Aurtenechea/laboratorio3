@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+	    <link href="css/bootstrap.min.css" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript">
+	
+		function mostar(){
+			var usuario = document.getElementById("usuario").value;
+			var password = document.getElementById("password").value;
+			alert(usuario+password);
+		}
+    
+	
+	</script>
+</head>
+
+<body>
+<div class="container">
+
+<div class ="row">
+<div class ="col-sm-4">
+<form action="" method="GET" class="form-horizontal" role="form">
+    <fieldset>
+        <legend>Login:</legend>
+        <div class="form-group">
+		
+			<label for="usuario" class="control-label">Usuario</label>
+	
+			<input type="text" id="usuario" class="form-control col-sm-9" name="txtUsr"/>
+			
+		</div>
+		<div class="form-group row">
+			<label for="usuario" class="control-label">Contraseña</label>
+			
+			<input type="password" id="password" class="form-control" name="txtPass"/>
+			
+		</div>
+		<div class="form-group row">
+			
+			<input type="reset" class="btn btn-danger btn-sm" value="Limpiar"/>
+			
+			<input type="submit" class="btn btn-primary btn-lg pull-right" value="Enviar" onclick="mostar()"/>
+		</div>
+	  </fieldset>
+
+</form>
+</div>
+</div>
+</div>
+</body>
+
+</html>
