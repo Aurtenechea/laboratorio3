@@ -15,7 +15,7 @@
     }
         function startAjaxPHP_GET(){
         hrequest = new XMLHttpRequest();
-        hrequest.open("GET","ajaxFile.php?valor=sarasa",false);
+        hrequest.open("GET","ajaxFile.php?valor=sarasa", true);
         //console.log(hrequest);
         hrequest.send(null); //enviar la peticion
         hrequest.onreadystatechange = callback;
