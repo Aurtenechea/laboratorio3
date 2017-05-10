@@ -1,4 +1,9 @@
 <?php
+/*  El index cuando envia el form de registro o de login se llama a si mismo.
+    Segun sea el form que se envia, este va a incluir el el archivo login.php o
+    register.php */
+
+
 /* Main page with two forms: sign up and log in */
 require 'db.php';
 
@@ -9,7 +14,7 @@ session_start();
 <html>
 <head>
   <title>Sign-Up/Login Form</title>
-  <?php include 'css/css.html'; ?>
+  <?php include 'css/css.html'; ?> <!-- incluye los links tag -->
 </head>
 
 <?php
