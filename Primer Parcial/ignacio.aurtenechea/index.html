@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous">
+          <!-- Latest compiled and minified CSS -->
+          </script>
+
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+          <script src="./index.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row" style="padding:15px 0 0 20px;">
+                <button onclick="mostrarCrearPost()" class="btn btn-primary">Crear Post</button>
+                <br><br>
+            </div>
+            <div class="row" style="padding:15px 0 0 20px;">
+                <div class="col-md-3 col-xs-12 bg-warning" >
+                    <label for="user" class="text-primary">User (dato recuperado):</label><br>
+                    <input type="text" id="usuario" class="input-sm" value="indefinido">
+                    <br><br>
+                    <label for="user" class="text-primary">Color (dato recuperado):</label><br>
+                    <input type="text" id="color" class="input-sm" value="indefinido">
+                    <br><br>
+                    <label for="user" class="text-primary">Font (dato recuperado):</label><br>
+                    <input type="text" id="font" class="input-sm" value="indefinido">
+                    <br><br>
+                </div>
+                <div id="crearpost" class="col-md-5 col-xs-12 bg-info invisible" >
+                    <h1>CREAR UN POST!</h1>
+                    <label for="user" class="text-primary">post title:</label><br>
+                    <input type="text" id="posttitle" class="input-sm" value="escribi el titulo">
+                    <br><br>
+                    <label for="user" class="text-primary">post header:</label><br>
+                    <input type="text" id="postheader" class="input-sm" value="escribi el header">
+                    <br><br>
+                    <label for="user" class="text-primary">post text:</label><br>
+                    <input type="text" id="posttext" class="input-sm" value="escribi el texto">
+                    <br><br>
+                    <button onclick="enviarPost()" class="btn btn-success">Enviar Post</button>
+                    <br><br>
+                </div>
+                <div id="postenviado" class="col-md-4 col-xs-12 bg-danger hidden" >
+
+                </div>
+                <div id="cargando" class="col-md-4 col-xs-12 hidden" >
+                    <div>
+                        <img src="spinnergif.gif" alt="bla bla" height="auto" width="auto">
+                    </div>
+                </div>
+
+            </div> <!-- row -->
+
+        </div>
+    </body>
+</html>
