@@ -1,0 +1,107 @@
+﻿abrir terminal y seleccionar la carpeta del proyecto nuevo
+
+--asegurarse que tenga permisos 
+
+
+sobre el terminar ejecutar-> code .
+
+--se abrira el visual studio code y se podra agregar y compilar archivos.
+
+
+
+para compilar archivos. 
+ejecutar comando-> tsc <archivo>.ts
+
+
+para agregar una inspeccion sobre todos los arcivos con extension .ts
+
+ejecutar en la terminal->tsc -w *.ts
+
+
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+el tipo function:
+
+(argumento:tipo) => tipo_retorno
+
+
+ej:
+var algo : (param:string)=>string = 
+	function(param:string):string{
+ return "Hola "+param;
+}
+
+
+
+parametros opcionales
+
+
+function algo(param:string, param?:string):void{}
+
+si no se pasa el parametro opcional(?) se le asigna null
+
+
+
+parametros predeterminados
+
+
+function algo(param:string, param:string="algo"):void{}
+
+si no se pasa el parametro predeterminado se le asigna "algo"
+
+
+
+parametros rest
+
+
+function algo(param:string, ...params:string[]):void{}
+
+permite pasar n parametros 
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+funciones fat arrow (=>) ó lambda
+
+
+var algo = (param, param1) => param + param1; //una linea
+
+var otro = (param, param1) => { 
+									
+				var a = param + 3;
+													return a + param1;	
+			      }
+//varias lineas
+
+
+
+ejemplo de alcance con =>
+
+
+function retrazarSaludo(nombre:string){
+	
+	this.nombre = nombre;
+	
+	this.hola = function(){						
+con flat arrow
+		
+setTimeout(function(){	setTimeout( () => alert(this.nombre), 100);
+			
+			alert(this.nombre);
+		}, 100);
+	
+		      };
+
+}
+
+//llamada
+
+var a = new retrazarSaludo("Juan");
+
+a.hola();//retorna undefined!!, se pierde el alcance del this
+
+//con flat arrow, retorna "Juan"
+
