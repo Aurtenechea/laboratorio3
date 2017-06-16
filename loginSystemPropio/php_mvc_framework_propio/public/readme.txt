@@ -1,6 +1,8 @@
 Circuito.
 se ingresa una url separada por barras:
 /home/index/2
+por ejemplo
+http://localhost/utn/laboratorio3/loginSystemPropio/php_mvc_framework_propio/public/user/login
 
 se instancia el controlador HomeController y se llama a su metodo index.
 Dentro del index se puede hacer uso de los modelos que pueden traer informacion

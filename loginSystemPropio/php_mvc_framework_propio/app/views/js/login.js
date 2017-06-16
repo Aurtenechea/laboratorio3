@@ -1,26 +1,18 @@
 console.log("loaded");
 
+
+/*  esta funcion toma los valores del login, los envia via con ajax por post a
+    direccion que verificara si los datos de login son correctos. El sitio de
+    verificacion retornara un objeto json en formato string. Este contiene
+    el nombre del usuario y si esta logueado o no.  */
 function log(){
-    // tomo las variables con jQuery..
-    var user = $('#usuario').val();
+    var user = $('#user').val();
     var pass = $('#pass').val();
 
-    // console.log( user + ": " + pass);
-
-    //si se ejecuta el archivo index.html haciendo doble click desde el archivo
-    //en el escritorio.
-    //El json puede tener las propiedades con o sin comillas: {"usuario": user, "pass": pass}
-    //una forma de usar el $.post
     var params = { usuario: user, pass: pass };
-    var url = "/utn/laboratorio3/loginSystemPropio/php_mvc_framework_propio/public/home/verify/";
+    var url = "/utn/laboratorio3/loginSystemPropio/php_mvc_framework_propio/public/user/verify/";
 
     var callback = function( data ){
-        // console.log(data);
-        // console.log("listo");
-
-        // $('#usuario').val( data );
-        // console.log(data);
-
         var objData = JSON.parse(data);
         console.log(objData);
         if( objData.loged_in ){

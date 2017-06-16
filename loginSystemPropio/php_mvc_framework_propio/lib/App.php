@@ -1,5 +1,6 @@
 <?php
 
+
 class App
 {
     /*  controlador y metodo default. Si se requieren algunos que no existen
@@ -48,7 +49,7 @@ class App
             con los parametros del array del segundo parametro */
         call_user_func_array( [$this->controller, $this->method], $this->params );
 
-        // print_r($this->params);
+
     }
 
     /*  devuelve los parametros de la url. Que estaban en este formato:
