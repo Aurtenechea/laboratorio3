@@ -1,6 +1,7 @@
 <?php
 
-echo "hola mundo";
+// echo "hola mundo";
 
 //var_dump($_GET);
-//var_dump($_POST);
+var_dump($_POST);
+// json_encode($preJSON);

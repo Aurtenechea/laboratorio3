@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>typescript</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    </head>
+    <body>
+        <label for="license">Brand:</label><br>
+        <input type="text" id="brand" value="ford">
+        <br><br>
+        <label for="brand">Price:</label><br>
+        <input type="text" id="price" value="10">
+        <br><br>
+        <label for="color">Color:</label><br>
+        <select id="color" name="color">
+            <option value='nada'>Nada</option>
+            <option value='rojo'>Rojo</option>
+        </select>
+        <br><br>
+        <input type="hidden" id="hdnCar_id">
+
+
+        <button id="outFromLicense" onclick='parcial.Controladora.addCar()'>Agregar</button>
+        <button id="outFromLicense" onclick='parcial.Controladora.showCars()'>Mostrar</button>
+        <button id="outFromLicense" onclick='parcial.Controladora.filterCarFromColor()'>Filtrar por color</button>
+
+
+        <table class="table table-striped" id="cars_table">
+          <thead >
+            <tr id="cars_tr">
+                <th>Brand</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Options</th>
+            </tr>
+          </thead>
+          <tbody id="cars_tbody">
+
+          </tbody>
+        </table>
+    </body>
+    <footer>
+        <!-- scripts -->
+        <script src="./clases/lib.js"></script>
+        <script src="./clases/car.js"></script>
+        <script src="./clases/controladora.js"></script>
+        <!-- <script src="http://localhost/utn/laboratorio3/practica_segundo_parcial/main.js"></script> -->
+    </footer>
+</html>
